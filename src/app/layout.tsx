@@ -1,20 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "BambooHR Alternative for Growing Teams | Employo",
@@ -46,10 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${outfit.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
-    >
+    <html lang="en" className="scroll-smooth antialiased">
       <body className="min-h-screen bg-[#231F20] text-white font-sans selection:bg-[#2674BC] selection:text-white">
         {children}
       </body>

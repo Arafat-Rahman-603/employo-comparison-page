@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function BambooHRAlternativePage() {
   return (
-    <div className="min-h-screen bg-[#181617] text-white flex flex-col selection:bg-[#2674BC] selection:text-white">
+    <div className="min-h-screen bg-[#231F20] text-white flex flex-col selection:bg-[#2674BC] selection:text-white">
       {/* 1. Global Navigation */}
       <Navbar />
 

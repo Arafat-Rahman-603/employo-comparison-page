@@ -1,9 +1,62 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Neue Montreal", sans-serif;
+  --font-display: "Ginto Nord", "Neue Montreal", sans-serif;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("/fonts/625d7ea5a2315537235fcdd8_NeueMontreal-Regular.33won4_q0p5cg.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("/fonts/625d7ea5a23155241e5fcdd7_NeueMontreal-Bold.2ibvvpf0z9dc4.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ginto Nord";
+  src: url("/fonts/625d7ea5a23155e7175fcddc_Ginto_Nord_Regular.39t3jjbpap54y.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ginto Nord";
+  src: url("/fonts/625d7ea5a23155f18d5fcddb_Ginto_Nord_Medium.3o_9on5gs5ji0.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ginto Nord";
+  src: url("/fonts/625d7ea5a2315546915fcdda_Ginto_Nord_Bold.0k3bif_pknbhm.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ginto Nord";
+  src: url("/fonts/625d7ea5a23155872c5fcdd9_Ginto_Nord_Black.2pe4fe77smmlp.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
-    --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-display: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-sans: "Neue Montreal", sans-serif;
+    --font-display: "Ginto Nord", "Neue Montreal", sans-serif;
     --background: #231f20;
     --foreground: #ffffff;
   }
@@ -15,7 +68,7 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, .font-heading {
+  h1, h2, h3, h4, h5, h6, .font-heading, .font-display {
     font-family: var(--font-display);
     letter-spacing: -0.03em;
   }
@@ -29,6 +82,64 @@
 
 .font-body {
   font-family: var(--font-sans);
+}
+
+/* Employo Signature Button-3 */
+.button-3 {
+  color: #231f20;
+  text-transform: uppercase;
+  background-color: #2674bc;
+  border-radius: 128px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+}
+
+.button-3:hover {
+  background-color: #29abe2;
+}
+
+/* Employo Button 3-Dot Icon */
+.btn-icon-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+}
+
+.btn-icon-dots .dot-1 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #231f20;
+  transition: transform 0.2s ease;
+}
+
+.btn-icon-dots .dot-2 {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #231f20;
+  transition: transform 0.2s ease;
+}
+
+.btn-icon-dots .dot-3 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #231f20;
+  transition: transform 0.2s ease;
+}
+
+.group:hover .btn-icon-dots span,
+.button-3:hover .btn-icon-dots span {
+  transform: scale(1.2);
 }
 
 /* Custom marquee animations */

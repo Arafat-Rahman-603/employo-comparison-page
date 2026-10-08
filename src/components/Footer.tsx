@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-[#181617] text-white border-t border-white/10">
+    <footer className="bg-[#231F20] text-white border-t border-white/10">
       {/* Main 5-Column Navigation Grid matching live Employo website */}
       <div className="py-16 sm:py-20">
         <div className="max-w-[1240px] mx-auto px-6 sm:px-8">

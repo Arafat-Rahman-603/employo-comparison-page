@@ -19,7 +19,7 @@ export function PricingCalculator() {
   const presets = [15, 25, 50, 75, 100];
 
   return (
-    <section id="pricing" className="py-20 sm:py-28 bg-[#181617] text-white relative border-b border-white/10">
+    <section id="pricing" className="py-20 sm:py-28 bg-[#231F20] text-white relative border-b border-white/10">
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-14">
@@ -33,7 +33,7 @@ export function PricingCalculator() {
         </div>
 
         {/* Compact Calculator Box */}
-        <div className="max-w-3xl mx-auto bg-[#201D1E] rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl">
+        <div className="max-w-3xl mx-auto bg-[#231F20] rounded-[24px] sm:rounded-[36px] p-7 sm:p-10 border border-white/12 shadow-2xl">
           {/* Employee Count Selector */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
@@ -41,8 +41,8 @@ export function PricingCalculator() {
                 <Users className="w-4 h-4 text-[#29ABE2]" />
                 <span>Team Size:</span>
               </label>
-              <div className="flex items-baseline gap-1.5 px-4 py-1.5 rounded-full bg-[#2674BC]/20 border border-[#2674BC]/30 text-white font-mono">
-                <span className="text-lg font-bold text-[#29ABE2]">{employeeCount}</span>
+              <div className="flex items-baseline gap-1.5 px-3.5 py-1 rounded-full bg-[#2674BC]/20 border border-[#2674BC]/30 text-white font-semibold">
+                <span className="text-base sm:text-lg font-bold text-[#29ABE2]">{employeeCount}</span>
                 <span className="text-xs text-white/70">employees</span>
               </div>
             </div>
@@ -56,10 +56,10 @@ export function PricingCalculator() {
               step="5"
               value={employeeCount}
               onChange={(e) => setEmployeeCount(Number(e.target.value))}
-              className="w-full h-2.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#29ABE2]"
+              className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#2674BC]"
             />
 
-            <div className="flex justify-between text-[11px] text-white/40 font-mono mt-2">
+            <div className="flex justify-between text-[11px] text-white/40 font-medium mt-2">
               <span>5 employees</span>
               <span className="text-emerald-400 font-semibold">25 (Free limit)</span>
               <span>50</span>
@@ -75,9 +75,9 @@ export function PricingCalculator() {
                   key={preset}
                   type="button"
                   onClick={() => setEmployeeCount(preset)}
-                  className={`px-3 py-1 rounded-full text-xs font-semibold transition-all ${
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                     employeeCount === preset
-                      ? "bg-[#29ABE2] text-[#181617]"
+                      ? "bg-[#2674BC] text-[#231F20]"
                       : "bg-white/5 hover:bg-white/10 text-white/70 border border-white/10"
                   }`}
                 >
@@ -88,13 +88,13 @@ export function PricingCalculator() {
           </div>
 
           {/* Two Clean Pricing Blocks */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 items-stretch">
             {/* Employo Block */}
-            <div className="p-6 rounded-2xl bg-[#231F20] border-2 border-[#2674BC] flex flex-col justify-between shadow-lg">
+            <div className="p-6 rounded-[24px] bg-[#231F20] border-2 border-[#2674BC] flex flex-col justify-between shadow-xl">
               <div>
                 <div className="flex items-center justify-between text-xs mb-3">
                   <span className="font-bold text-[#29ABE2] uppercase tracking-wider">Employo</span>
-                  <span className="bg-[#2674BC]/20 text-[#29ABE2] px-2 py-0.5 rounded text-[11px] font-semibold">
+                  <span className="bg-[#EBF5FB] text-[#2674BC] px-2.5 py-0.5 rounded-full text-[11px] font-bold">
                     {employoPlanName}
                   </span>
                 </div>
@@ -118,7 +118,7 @@ export function PricingCalculator() {
             </div>
 
             {/* BambooHR Block */}
-            <div className="p-6 rounded-2xl bg-[#201D1E] border border-white/10 flex flex-col justify-between">
+            <div className="p-6 rounded-[24px] bg-[#1C191A] border border-white/12 flex flex-col justify-between shadow-lg">
               <div>
                 <div className="flex items-center justify-between text-xs mb-3">
                   <span className="font-bold text-white/60 uppercase tracking-wider">BambooHR</span>
@@ -146,14 +146,14 @@ export function PricingCalculator() {
           </div>
 
           {/* Estimated Difference Bar */}
-          <div className="p-4 rounded-xl bg-gradient-to-r from-[#2674BC]/20 to-[#29ABE2]/10 border border-[#2674BC]/30 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div className="p-4 rounded-2xl bg-[#1C191A] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <div>
               <div className="text-xs text-white/60 font-medium">Estimated Monthly Difference</div>
               <div className="font-display text-xl sm:text-2xl font-black text-[#29ABE2]">
                 Save ~${monthlySavings}/month
               </div>
             </div>
-            <div className="text-xs text-white/70 bg-black/30 px-3.5 py-1.5 rounded-full border border-white/10">
+            <div className="text-xs text-white/80 bg-black/40 px-3.5 py-1.5 rounded-full border border-white/10 font-medium">
               ~${annualSavings.toLocaleString()} estimated savings per year
             </div>
           </div>

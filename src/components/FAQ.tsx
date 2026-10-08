@@ -49,7 +49,7 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-[#181617] text-white relative border-b border-white/10">
+    <section id="faq" className="py-20 sm:py-28 bg-[#231F20] text-white relative border-b border-white/10">
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-14">
@@ -62,17 +62,17 @@ export function FAQ() {
         </div>
 
         {/* Compact Accordion List */}
-        <div className="max-w-3xl mx-auto space-y-3">
+        <div className="max-w-3xl mx-auto space-y-3.5">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={index}
                 onClick={() => toggle(index)}
-                className={`rounded-2xl p-5 sm:p-6 cursor-pointer transition-all duration-200 bg-[#201D1E] border ${
+                className={`rounded-[20px] p-5 sm:p-6 cursor-pointer transition-all duration-200 bg-[#231F20] border ${
                   isOpen
-                    ? "border-[#2674BC]/60 shadow-lg shadow-[#2674BC]/5"
-                    : "border-white/10 hover:border-white/20"
+                    ? "border-[#2674BC] shadow-lg shadow-[#2674BC]/5"
+                    : "border-white/12 hover:border-white/20"
                 }`}
               >
                 <div className="flex items-center justify-between gap-4">
@@ -83,7 +83,7 @@ export function FAQ() {
                   <div
                     className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
                       isOpen
-                        ? "bg-[#29ABE2] text-[#181617] rotate-45"
+                        ? "bg-[#2674BC] text-[#231F20] rotate-45"
                         : "bg-white/5 text-white/60 hover:text-white"
                     }`}
                   >
@@ -92,7 +92,7 @@ export function FAQ() {
                 </div>
 
                 {isOpen && (
-                  <p className="mt-3 pt-3 border-t border-white/10 text-sm text-white/75 leading-relaxed">
+                  <p className="mt-3.5 pt-3.5 border-t border-white/10 text-sm text-white/75 leading-relaxed">
                     {faq.answer}
                   </p>
                 )}
