@@ -7,23 +7,22 @@ export function FinalCTA() {
   return (
     <section className="py-20 sm:py-28 bg-[#231F20] text-white relative">
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8">
-        <div className="rounded-[36px] bg-gradient-to-br from-[#2674BC] via-[#29ABE2] to-[#2674BC] p-8 sm:p-14 lg:p-16 text-center relative overflow-hidden shadow-2xl">
-          {/* Subtle atmospheric accents */}
-          <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-white/10 blur-2xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-black/15 blur-2xl pointer-events-none" />
+        <div className="rounded-[28px] bg-[#2674BC] p-8 sm:p-14 lg:p-16 text-center relative overflow-hidden shadow-2xl">
+          {/* Subtle top accent */}
+          <div className="absolute top-0 left-0 right-0 h-[4px] bg-white/20" />
 
           <div className="max-w-2xl mx-auto relative z-10 flex flex-col items-center">
             {/* Headline */}
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black tracking-tight text-[#231F20] leading-[1.1] mb-6 text-balance">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-tight text-[#231F20] leading-[1.1] mb-5 text-balance">
               Keep HR simple as your team grows.
             </h2>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg md:text-xl text-[#231F20]/80 font-medium leading-relaxed mb-8 text-balance">
-              Start with the essentials and see how Employo streamlines your daily operations.
+            <p className="text-base sm:text-lg text-[#231F20]/80 font-medium leading-relaxed mb-8 text-balance max-w-lg">
+              Start free and see how Employo handles attendance, leave, shifts, and employee records without the complexity.
             </p>
 
-            {/* Primary CTA Button */}
+            {/* Primary CTA */}
             <a
               href="https://app.employoapp.com/signup"
               className="inline-flex items-center justify-center bg-[#231F20] hover:bg-black text-white font-bold text-sm sm:text-base uppercase tracking-wider px-9 py-4 rounded-full transition-all duration-200 shadow-xl group cursor-pointer"

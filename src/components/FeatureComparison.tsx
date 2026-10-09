@@ -18,28 +18,28 @@ const COMPARISON_ROWS: ComparisonRow[] = [
     note: "Employee records, profiles & company directory",
   },
   {
-    feature: "Attendance",
+    feature: "Attendance Tracking",
     employo: true,
     bamboo: true,
-    note: "Real-time check-ins, daily hours & on-time logs",
+    note: "Check-in timestamps, daily logs & exportable reports",
   },
   {
     feature: "Leave Management",
     employo: true,
     bamboo: true,
-    note: "Vacation requests, balances & manager approvals",
+    note: "Leave requests, balances & manager approvals",
   },
   {
     feature: "Shift Management",
     employo: true,
     bamboo: true,
-    note: "Shift schedules, weekly rosters & team coverage",
+    note: "BambooHR via Time & Attendance add-on (fees may apply)",
   },
   {
     feature: "Employee Documents",
     employo: true,
     bamboo: true,
-    note: "Cloud document storage for contracts and IDs",
+    note: "Cloud document storage per employee profile",
   },
   {
     feature: "Reports",
@@ -51,13 +51,13 @@ const COMPARISON_ROWS: ComparisonRow[] = [
     feature: "Applicant Tracking",
     employo: false,
     bamboo: true,
-    note: "Job listings, candidate pipeline & recruiting",
+    note: "Job listings, candidate pipeline & recruiting tools",
   },
   {
-    feature: "Onboarding",
+    feature: "Onboarding Workflows",
     employo: false,
     bamboo: true,
-    note: "Structured new hire checklists & workflows",
+    note: "Structured new-hire checklists & task assignments",
   },
   {
     feature: "Performance Management",
@@ -66,10 +66,10 @@ const COMPARISON_ROWS: ComparisonRow[] = [
     note: "360-degree reviews, goal tracking & appraisals",
   },
   {
-    feature: "Payroll",
+    feature: "Payroll Processing",
     employo: false,
     bamboo: true,
-    note: "Direct deposits, tax filing & benefits services",
+    note: "US-focused payroll, tax filing & benefits admin",
   },
 ];
 

@@ -12,32 +12,37 @@ const FAQS: FAQItem[] = [
   {
     question: "Is Employo a BambooHR alternative?",
     answer:
-      "Employo is a focused, lightweight alternative for teams primarily looking for everyday HR operations: employee records, attendance, leave approvals, and shift scheduling—without the enterprise overhead or complex setup.",
+      "Employo is a focused alternative for teams primarily looking for everyday HR operations: employee records, attendance, leave approvals, and shift scheduling — without the enterprise overhead or complex setup that comes with a broader HR platform.",
   },
   {
     question: "Is Employo cheaper than BambooHR?",
     answer:
-      "Yes. Employo uses flat plan-based pricing: it is completely free for up to 25 employees, and $29.90/month flat for up to 100 employees on the Pro plan. In contrast, BambooHR typically charges per-employee monthly fees plus potential implementation costs.",
+      "Employo uses flat plan-based pricing: it is completely free for up to 25 employees, and $29.90/month flat for up to 100 employees on the Pro plan. BambooHR does not publish fixed public pricing — their quotes are typically per-employee monthly, with pricing varying by plan tier, team size, and selected modules.",
   },
   {
-    question: "Does Employo support attendance?",
+    question: "Does Employo include attendance tracking?",
     answer:
-      "Yes. Employo includes real-time attendance tracking, check-in timestamps, working hours calculation, and live roster views right out of the box.",
+      "Yes. Employo includes attendance tracking with check-in records, daily log views, and exportable reports — right out of the box, with no additional module required.",
   },
   {
     question: "Does Employo support shift management?",
     answer:
-      "Yes. Employo offers built-in shift scheduling, weekly roster planning, and team coverage management designed specifically for frontline and operational teams.",
+      "Yes. Employo includes built-in shift scheduling and weekly roster planning designed for operational teams.",
   },
   {
     question: "Does BambooHR support shift scheduling?",
     answer:
-      "Yes. BambooHR supports shift scheduling through its Time & Attendance add-on module, which may carry additional per-user fees depending on your package tier.",
+      "BambooHR offers time and attendance features, with shift scheduling available as part of their Time & Attendance add-on. Feature availability and pricing depend on your plan tier.",
   },
   {
     question: "Does Employo offer payroll?",
     answer:
-      "Employo focuses exclusively on core operational HR (records, attendance, leave, and shifts) and does not currently process payroll or tax filings directly.",
+      "Employo focuses on core operational HR — records, attendance, leave, and shifts — and does not currently process payroll or tax filings.",
+  },
+  {
+    question: "How does Employo handle leave balances?",
+    answer:
+      "Employo lets managers configure leave types (such as annual, sick, and unpaid leave) and tracks remaining balances for each employee. When leave is approved, the balance is updated accordingly.",
   },
 ];
 
@@ -57,22 +62,22 @@ export function FAQ() {
             Frequently asked <span className="text-[#2674BC]">questions</span>
           </h2>
           <p className="text-base sm:text-lg text-white/70 font-normal leading-relaxed text-balance">
-            Clear, straightforward answers about features, pricing, and how Employo compares.
+            Straightforward answers about features, pricing, and how Employo compares to BambooHR.
           </p>
         </div>
 
-        {/* Compact Accordion List */}
-        <div className="max-w-3xl mx-auto space-y-3.5">
+        {/* Accordion List */}
+        <div className="max-w-3xl mx-auto space-y-3">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={index}
                 onClick={() => toggle(index)}
-                className={`rounded-[20px] p-5 sm:p-6 cursor-pointer transition-all duration-200 bg-[#231F20] border ${
+                className={`rounded-[18px] p-5 sm:p-6 cursor-pointer transition-all duration-200 bg-[#231F20] border ${
                   isOpen
                     ? "border-[#2674BC] shadow-lg shadow-[#2674BC]/5"
-                    : "border-white/12 hover:border-white/20"
+                    : "border-white/10 hover:border-white/20"
                 }`}
               >
                 <div className="flex items-center justify-between gap-4">
